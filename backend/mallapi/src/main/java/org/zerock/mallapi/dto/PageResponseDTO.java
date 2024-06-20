@@ -29,7 +29,7 @@ public class PageResponseDTO<E> {
 
         int end = (int)(Math.ceil(pageRequestDTO.getPage()/10.0)) * 10;
         int start = end - 9;
-        int last =  (int)(Math.ceil((totalCount/(double)pageRequestDTO.getSize())));
+        int last =  (int)(Math.ceil(totalCount/(double)pageRequestDTO.getSize()));
 
         end = end > last ? last : end; 
         this.prev = start > 1;
